@@ -1,0 +1,58 @@
+# React Native
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/android/app/build/
+/ios/Pods/
+/ios/build/
+/*.log
+
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/xcuserdata
+
+# Android/IntelliJ
+*.iml
+.idea/
+.gradle
+/local.properties
+
+# Node.js
+.env
+.env.*.local
+dist/
+build/
+coverage/
+*.tgz
+.pnpm-debug.log
+
+# Metro bundler
+.expo/
+.expo-shared/
+*.expo
+*.expo.*
+
+# Watchman
+.watchmanconfig
+
+# VSCode
+.vscode/
+
+# Log files
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Optional: If using Firebase or Google services
+*.keystore
+google-services.json
+GoogleService-Info.plist
