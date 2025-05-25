@@ -1,20 +1,20 @@
 import { StyleSheet } from "react-native";
-
+import {theme} from "../constants/theme.js"
 const styles = StyleSheet.create({
   infoContainer: {
     paddingTop: 30,
 
   },
   infoTitle:{
-    color: "Black",
+    color: theme.colors.primary,
     fontSize: 20,
-    fontFamily: "Poppins_Bold",
+    fontFamily: theme.fonts.bold,
   },
   cardContainer: {
     paddingHorizontal: 10,
     marginVertical:10,
-    backgroundColor: '#4894FE',
-    color: 'white',
+    backgroundColor: theme.colors.primary,
+    color: theme.colors.white,
     borderRadius: 10, // Optional for rounded corners
   },
   rowContainer: {
@@ -27,17 +27,17 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   infoCardTitle: {
-    color: "white",
+    color: theme.colors.white,
     fontSize: 16,
-    fontFamily: "Poppins_Bold",
+    fontFamily:theme.fonts.bold
   },
   infoCardParagraph: {
-    color: '#CBE1FF',
+    color: theme.colors.white,
     fontSize: 14,
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
   },
   divider: {
-    backgroundColor: "#CBE1FF",
+    backgroundColor: theme.colors.gray,
     height: 1,
     marginVertical: 10,
   },
@@ -47,13 +47,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textStyle: {
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
     fontSize: 12,
-    color: "white",
+    color: theme.colors.white,
     marginLeft: 5,
   },
   detailButton: {
-    backgroundColor: "#E4EDFF", // light blue jesa image mein
+    backgroundColor: theme.colors.tertiary, // light blue jesa image mein
     borderRadius: 10,
     width: '100%',
     marginTop: 10,
@@ -63,18 +63,18 @@ const styles = StyleSheet.create({
   },
   
   detailButtonText: {
-    color: "#4894FE", // match text color with your primary theme
-    fontFamily: "Poppins_Bold",
+    color: theme.colors.tertiary, // match text color with your primary theme
+    fontFamily: theme.fonts.bold,
     fontSize: 14,
   },
   textStyleLeft:{
-    color:"white"
+    color:theme.colors.white
   },
   textStyleRight:{
-     color:"white"
+    color:theme.colors.white
   },
   textLocation:{
-    color:"white"
+    color:theme.colors.white
   }
 });
 

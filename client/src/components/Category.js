@@ -16,7 +16,7 @@ const Category = () => {
   const renderItem = ({ item }) => (
     <View style={styles.categoryMainContainer}>
       <View style={styles.categoryCircle}>
-        <Icon name={item.icon} size={30} color="#007BFF" />
+        <Icon name={item.icon} size={30} style={styles.categoryIcon} />
       </View>
       <Text style={styles.categoryText}>{item.title}</Text>
     </View>

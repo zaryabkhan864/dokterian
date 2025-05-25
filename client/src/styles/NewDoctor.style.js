@@ -1,19 +1,15 @@
 import { StyleSheet } from "react-native";
-
+import {theme} from "../constants/theme.js"
 const styles = StyleSheet.create({
-  infoContainer: {
-
-
-  },
   infoTitle:{
-    color: "Black",
+    color: theme.colors.black,
     fontSize: 20,
-    fontFamily: "Poppins_Bold",
+    fontFamily: theme.fonts.bold,
   },
   cardContainer: {
     paddingHorizontal: 10,
-    backgroundColor:"#FFFFFF",
-    color: '#FFFFFF',
+    backgroundColor:theme.colors.lightWhite,
+    color: theme.colors.primary,
     borderRadius: 10, // Optional for rounded corners
     marginVertical: 10,
   },
@@ -27,17 +23,17 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   infoCardTitle: {
-    color: "#0D1B34",
+    color: theme.colors.primary,
     fontSize: 16,
-    fontFamily: "Poppins_Bold",
+    fontFamily: theme.fonts.bold,
   },
   infoCardParagraph: {
-    color: '#8696BB',
+    color: theme.colors.gray,
     fontSize: 14,
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
   },
   divider: {
-    backgroundColor: "#CBE1FF",
+    backgroundColor: theme.colors.primary,
     height: 1,
     marginVertical: 10,
   },
@@ -47,17 +43,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textStyleLeft: {
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
     fontSize: 12,
-    color: "#FEB052",
+    color: theme.colors.tertiary,
     marginLeft: 5,
   },
   textStyleRight: {
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
     fontSize: 12,
-    color: "Black",
+    color: theme.colors.primary,
     marginLeft: 5,
   },
+  icon:{
+    color:theme.colors.primary
+  }
 });
 
 export default styles;

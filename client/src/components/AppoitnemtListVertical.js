@@ -51,16 +51,16 @@ const AppointmentListVertical = () => {
                 <Title style={styles.infoCardTitle}>{item.name}</Title>
                 <Paragraph style={styles.infoCardParagraph}>{item.specialization}</Paragraph>
               </View>
-              <MaterialCommunityIcons name="chevron-right" size={24} color="white" />
+              <MaterialCommunityIcons name="chevron-right" size={24}  style={styles.icon}/>
             </View>
             <Divider style={styles.divider} />
             <View style={styles.infoAppointmentInfo}>
               <View style={styles.rowContainer}>
-                <MaterialCommunityIcons name="calendar" size={16} color="white" />
+                <MaterialCommunityIcons name="calendar" size={16}  style={styles.icon}/>
                 <Text style={styles.textStyle}> {item.date}</Text>
               </View>
               <View style={styles.rowContainer}>
-                <MaterialCommunityIcons name="clock-outline" size={16} color="white" />
+                <MaterialCommunityIcons name="clock-outline" size={16}  style={styles.icon} />
                 <Text style={styles.textStyle}> {item.time}</Text>
               </View>
             </View>

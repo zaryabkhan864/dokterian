@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
-
+import {theme} from '../constants/theme.js'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F2F6FF',
+    backgroundColor: theme.colors.white,
     padding: 20,
   },
   card: {
-    backgroundColor: '#4894FE',
+    backgroundColor: theme.colors.primary,
     borderRadius: 16,
     padding: 16,
     elevation: 4,
@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    color: 'white',
-    fontFamily: 'Poppins_Bold',
+    color: theme.colors.white,
+    fontFamily: theme.fonts.bold,
   },
   specialization: {
     fontSize: 16,
-    color: '#CBE1FF',
-    fontFamily: 'Poppins_Regular',
+    color: theme.colors.gray,
+    fontFamily: theme.fonts.regular,
     marginBottom: 10,
   },
   infoRow: {
@@ -46,18 +46,18 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   detailText: {
-    color: 'white',
+    color: theme.colors.white,
     fontSize: 16,
-    fontFamily: 'Poppins_Regular',
+    fontFamily: theme.fonts.regular,
     flex: 1,
     flexWrap: 'wrap',
   },
   notFound: {
-    color: 'red',
+    color: theme.colors.tertiary,
     fontSize: 18,
     textAlign: 'center',
     marginTop: 50,
-    fontFamily: 'Poppins_Bold',
+    fontFamily: theme.colors.bold,
   },
 });
 

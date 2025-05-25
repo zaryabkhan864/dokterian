@@ -1,12 +1,8 @@
-import { View, Text } from 'react-native'
+
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../constants/theme';
-
-import Category from './Category';
-import SearchBar from './SearchBar';
-
 import Home from '../screens/Home';
 import Appointment from '../screens/Appointment';
 import Message from '../screens/Message';

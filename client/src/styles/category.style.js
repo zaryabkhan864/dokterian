@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+import {theme} from '../constants/theme.js'
 const styles = StyleSheet.create({
     container: {
       flexDirection: "row",
@@ -12,11 +12,15 @@ const styles = StyleSheet.create({
       marginVertical: 10, // Add some vertical margin
       padding: 5, // Add padding around each item
     },
+    categoryIcon:{
+
+      color:theme.colors.white
+    },
     categoryCircle: {
       width: 60,
       height: 60,
       borderRadius: 30,
-      backgroundColor: "#e0f7fa",
+      backgroundColor: theme.colors.secondary,
       justifyContent: "center",
       alignItems: "center",
       marginBottom: 8,
@@ -26,8 +30,8 @@ const styles = StyleSheet.create({
       textAlign: "center",
       fontSize: 14,
       paddingTop: 2, // Reduce spacing
-      fontFamily: "Poppins_Regular",
-      color: "#8696BB",
+      fontFamily: theme.fonts.regular,
+      color: theme.colors.primary,
     },
   });
 

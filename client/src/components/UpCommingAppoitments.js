@@ -3,25 +3,11 @@ import { Text, View, Image, FlatList } from 'react-native';
 import { Card, Title, Paragraph, Divider } from 'react-native-paper';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import styles from '../styles/UpCommingAppoitments.style';
-
-// Import local images
-import d1 from "../assets/images/d1.jpg";
-import d2 from "../assets/images/d2.jpg";
 import d3 from "../assets/images/d3.jpg";
 import d4 from "../assets/images/d4.jpg";
-import { useFonts } from "expo-font";
-import { Poppins_400Regular, Poppins_700Bold } from "@expo-google-fonts/poppins";
 
 const CompletedAppoitments = () => {
   const [doctorsData, setDoctorsData] = useState([]);
-  const [fontsLoaded] = useFonts({
-    Poppins_Regular: Poppins_400Regular,
-    Poppins_Bold: Poppins_700Bold,
-  });
-
-  if (!fontsLoaded) {
-    return null; // Jab tak font load nahi hota, kuch render mat karo
-  }
 
   useEffect(() => {
     // Simulate API data with local images

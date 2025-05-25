@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Text, View, Image, FlatList } from 'react-native';
 import { Card, Title, Paragraph, Divider } from 'react-native-paper';
-import { useFonts } from "expo-font";
-import { Poppins_400Regular, Poppins_700Bold } from "@expo-google-fonts/poppins";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import styles from '../styles/NewDoctor.style';
 
@@ -14,11 +12,6 @@ import d4 from "../assets/images/d4.jpg";
 const NewDoctor = () => {
   const [doctors, setDoctors] = useState([]);
 
-  // ✅ Hooks always on top, no condition
-  const [fontsLoaded] = useFonts({
-    Poppins_Regular: Poppins_400Regular,
-    Poppins_Bold: Poppins_700Bold,
-  });
 
   useEffect(() => {
     const fetchDoctors = async () => {
@@ -67,10 +60,6 @@ const NewDoctor = () => {
     fetchDoctors();
   }, []);
 
-  // ✅ Only block rendering here
-  if (!fontsLoaded) {
-    return null;
-  }
 
 
   const renderDoctorCard = ({ item }) => (
@@ -97,11 +86,11 @@ const NewDoctor = () => {
         {/* Appointment Info */}
         <View style={styles.infoAppointmentInfo}>
           <View style={styles.rowContainer}>
-            <MaterialCommunityIcons name="calendar" size={16} color="white" />
+            <MaterialCommunityIcons name="calendar" size={16} style={styles.icon} />
             <Text style={styles.textStyleLeft}> {item.date}</Text>
           </View>
           <View style={styles.rowContainer}>
-            <MaterialCommunityIcons name="clock-outline" size={16} color="white" />
+            <MaterialCommunityIcons name="clock-outline" size={16} style={styles.icon} />
             <Text style={styles.textStyleRight}> {item.time}</Text>
           </View>
         </View>

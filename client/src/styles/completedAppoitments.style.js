@@ -1,19 +1,19 @@
 import { StyleSheet } from "react-native";
-
+import {theme} from '../constants/theme.js'
 const styles = StyleSheet.create({
   infoContainer: {
 
 
   },
   infoTitle:{
-    color: "Black",
+    color: theme.colors.primary,
     fontSize: 20,
-    fontFamily: "Poppins_Bold",
+    fontFamily: theme.fonts.bold,
   },
   cardContainer: {
     paddingHorizontal: 10,
-    backgroundColor:"#FFFFFF",
-    color: '#FFFFFF',
+    backgroundColor:theme.colors.white,
+    color: theme.colors.white,
     borderRadius: 10, // Optional for rounded corners
     marginVertical: 10,
   },
@@ -27,17 +27,17 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   infoCardTitle: {
-    color: "#0D1B34",
+    color: theme.colors.primary,
     fontSize: 16,
-    fontFamily: "Poppins_Bold",
+    fontFamily: theme.colors.bold,
   },
   infoCardParagraph: {
-    color: '#8696BB',
+    color: theme.colors.secondary,
     fontSize: 14,
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
   },
   divider: {
-    backgroundColor: "#CBE1FF",
+    backgroundColor: theme.colors.gray,
     height: 1,
     marginVertical: 10,
   },
@@ -47,19 +47,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textStyleLeft: {
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
     fontSize: 12,
-    color: "#FEB052",
+    color: theme.colors.tertiary,
     marginLeft: 5,
   },
   textStyleRight: {
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
     fontSize: 12,
-    color: "Black",
+    color: theme.colors.black,
     marginLeft: 5,
   },
   detailButtonWrapper: {
-    backgroundColor: '#E4EDFF',
+    backgroundColor: theme.colors.secondary,
     borderRadius: 10,
     width: '100%',
     marginTop: 15,
@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
   },
   
   detailButtonText: {
-    color: '#4894FE',
-    fontFamily: 'Poppins_Bold',
+    color: theme.colors.white,
+    fontFamily: theme.fonts.bold,
     fontSize: 14,
   },
 

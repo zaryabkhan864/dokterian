@@ -4,8 +4,8 @@ const { height, width } = Dimensions.get('window');
 
 export const theme = {
     colors: {
-        primary: "#4894FE",
-        secondary: "#DDF0FF",
+        primary: "#3b3b98",
+        secondary: "#7d7dc8",
         tertiary: "#FF7754",
         gray: "#8696BB",
         offWhite:"#F3F4F8",

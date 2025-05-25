@@ -1,8 +1,7 @@
-import { View } from 'react-native';
+import { useCallback } from "react";
 import BottomTabs from "./src/components/BottomTabs";
 import 'leaflet/dist/leaflet.css';
 
-import { useCallback } from "react";
 import {
   useFonts,
   Roboto_400Regular,

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+import { theme } from '../constants/theme';
 const styles = StyleSheet.create({
   mainContainer: {
     flexDirection: "row",
@@ -12,14 +12,14 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   helloText: {
-    color: "gray",
+    color: theme.colors.gray,
     fontSize: 16,
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
   },
   nameText: {
-    color: "Black",
+    color: theme.colors.black,
     fontSize: 20,
-    fontFamily: "Poppins_Bold",
+    fontFamily: theme.fonts.bold,
   },
   image: {
     width: 50,

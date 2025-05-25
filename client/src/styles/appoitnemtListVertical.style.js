@@ -1,18 +1,19 @@
 import { StyleSheet } from "react-native";
-
+import { theme } from '../constants/theme';
 const styles = StyleSheet.create({
   container: {
     paddingVertical: 20,
     paddingHorizontal: 10,
   },
   cardWrapper: {
-    marginRight: 15,
+    marginRight: 10,
   },
   cardContainer: {
-    backgroundColor: '#4894FE',
+    backgroundColor: theme.colors.primary,
     borderRadius: 10,
     width: 280, // Card ka fixed width
-    padding: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 2,
   },
   rowContainer: {
     flexDirection: 'row',
@@ -26,15 +27,15 @@ const styles = StyleSheet.create({
   infoCardTitle: {
     color: "white",
     fontSize: 16,
-    fontFamily: "Poppins_Bold",
+    fontFamily: theme.fonts.bold,
   },
   infoCardParagraph: {
-    color: '#CBE1FF',
+    color: theme.colors.offWhite,
     fontSize: 14,
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
   },
   divider: {
-    backgroundColor: "#CBE1FF",
+    backgroundColor: theme.colors.lightWhite,
     height: 1,
     marginVertical: 10,
   },
@@ -44,11 +45,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textStyle: {
-    fontFamily: "Poppins_Regular",
+    fontFamily: theme.fonts.regular,
     fontSize: 12,
-    color: "white",
+    color: theme.colors.lightWhite,
     marginLeft: 5,
   },
+  icon:{
+    color:theme.colors.lightWhite
+  }
 });
 
 export default styles;

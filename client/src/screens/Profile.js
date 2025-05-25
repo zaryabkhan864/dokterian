@@ -2,25 +2,20 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { Divider } from 'react-native-paper';
+import styles from '../styles/profile.style'; // 👈 External stylesheet import
 
 const Profile = () => {
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
-            <ScrollView contentContainerStyle={{ padding: 20 }}>
-
+        <SafeAreaView style={styles.safeArea}>
+            <ScrollView contentContainerStyle={styles.scrollContainer}>
                 {/* Profile Image and Name */}
-                <View style={{ alignItems: 'center', marginBottom: 30 }}>
+                <View style={styles.profileContainer}>
                     <Image
                         source={{ uri: 'https://randomuser.me/api/portraits/men/75.jpg' }}
-                        style={{
-                            width: 100,
-                            height: 100,
-                            borderRadius: 50,
-                            marginBottom: 10,
-                        }}
+                        style={styles.profileImage}
                     />
-                    <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Dr. Imran Syahir</Text>
-                    <Text style={{ color: 'gray' }}>General Doctor</Text>
+                    <Text style={styles.profileName}>Dr. Imran Syahir</Text>
+                    <Text style={styles.profileRole}>General Doctor</Text>
                 </View>
 
                 {/* Options List */}
@@ -51,26 +46,12 @@ const Profile = () => {
 
                     <TouchableOpacity style={styles.optionRow}>
                         <MaterialIcons name="logout" size={24} color="#E53935" />
-                        <Text style={[styles.optionText, { color: '#E53935' }]}>Logout</Text>
+                        <Text style={[styles.optionText, styles.logoutText]}>Logout</Text>
                     </TouchableOpacity>
                 </View>
-
             </ScrollView>
         </SafeAreaView>
     );
-};
-
-const styles = {
-    optionRow: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingVertical: 15,
-        gap: 15,
-    },
-    optionText: {
-        fontSize: 16,
-        color: '#333',
-    },
 };
 
 export default Profile;

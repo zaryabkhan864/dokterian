@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+import { theme } from '../constants/theme';
 const styles = StyleSheet.create({
     searchMainContainer: {
         flexDirection: "row",
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         paddingVertical: 20,
         paddingHorizontal: 10,
-        backgroundColor: "#FAFAFA",
+        backgroundColor: theme.colors.white,
         borderRadius: 10,
     },
     searchTouch: {
@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
         gap: 8,
     },
     searchText: {
-        color: "gray",
+        color: theme.colors.gray,
         fontSize: 16,
-        fontFamily: "Poppins_Regular",
+        fontFamily: theme.fonts.regular,
     },
     
 })
