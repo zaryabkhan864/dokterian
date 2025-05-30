@@ -1,5 +1,9 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import BottomTabs from "./src/components/BottomTabs";
+import AppointmentDetails from "./src/components/AppointmentDetails";
+import Login from "./src/screens/Login";
+import Register from "./src/screens/Register";
+import ForgetPassword from "./src/screens/ForgetPassword";
 import 'leaflet/dist/leaflet.css';
 
 import {
@@ -8,9 +12,9 @@ import {
   Roboto_700Bold,
   Roboto_500Medium,
 } from "@expo-google-fonts/roboto";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import AppointmentDetails from './src/components/AppointmentDetails'; // <-- Add this
 
 const Stack = createNativeStackNavigator();
 
@@ -23,7 +27,7 @@ export default function App() {
 
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
-      await SplashScreen?.hideAsync?.(); // Optional chaining to avoid errors
+      await SplashScreen?.hideAsync?.();
     }
   }, [fontsLoaded]);
 
@@ -33,28 +37,12 @@ export default function App() {
 
   return (
     <NavigationContainer onReady={onLayoutRootView}>
-      <Stack.Navigator
-        screenOptions={{
-          tabBarStyle: {
-            position: "absolute",
-            bottom: 0,
-            right: 0,
-            left: 0,
-            elevation: 0,
-            height: 70,
-          },
-        }}
-      >
-        <Stack.Screen
-          name="BottomTabs"
-          component={BottomTabs}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="Details"
-          component={AppointmentDetails}
-          options={{ title: "Appointment Details" }}
-        />
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
+        <Stack.Screen name="BottomTabs" component={BottomTabs} />
+        <Stack.Screen name="Details" component={AppointmentDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );

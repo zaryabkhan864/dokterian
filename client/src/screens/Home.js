@@ -13,7 +13,7 @@ const Home = () => {
             <ScrollView>
                 <View style={{ paddingHorizontal: 20 }}>
                     <Header />
-              <AppoitnemtListVertical/>
+                    <AppoitnemtListVertical />
                     <SearchBar />
                     <Category />
                     <NewDoctor />
