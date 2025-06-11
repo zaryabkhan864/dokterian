@@ -22,7 +22,7 @@ connectDatabase();
 // Routes
 import userRoutes from "./routes/user.js";
 
-app.use("/api/v1", userRoutes);
+app.use("/api/", userRoutes);
 
 // Root route
 app.get("/", (req, res) => {
